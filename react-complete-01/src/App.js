@@ -152,7 +152,6 @@ class App extends Component {
         <Aux classes={classes.join(' ')}>
           <p>{this.state.changeCounter}</p>
           <button onClick={this.toggleCockpit}>Remove Cockpit</button>
-
           {this.state.isCockput ?
             <Cockpit
               persons={this.state.persons}
