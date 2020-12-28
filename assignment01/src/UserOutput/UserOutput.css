@@ -1,0 +1,7 @@
+.Output {
+    background-color: rgb(170, 147, 147);
+    width: 60%;
+    margin: 16px;
+    border: 2px solid black;
+    text-align: center;
+}

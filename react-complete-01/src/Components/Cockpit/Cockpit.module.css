@@ -1,0 +1,14 @@
+.Cockpit {
+    width: 10%;
+    color: white;
+    background-color: green;
+    font: inherit;
+    border: 1x solid green;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.Cockpit:hover {
+    background-color: salmon;
+    color: black;
+}
