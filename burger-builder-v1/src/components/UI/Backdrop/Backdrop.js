@@ -3,7 +3,7 @@ import React from 'react';
 const backDrop = (props) => {
     return (
         props.show ? <div
-            className={classes.Backdrop} onClick={props.onClick}>
+            className={classes.Backdrop} onClick={props.clicked}>
         </div> : null
     )
 };

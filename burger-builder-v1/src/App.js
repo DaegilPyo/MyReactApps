@@ -1,16 +1,30 @@
 import './App.css';
-import Layout from './components/Layout/Layout';
 import BurgerBuilder from './containers/BurgerBuilder/BurgerBuilder';
+import Layout from './hoc/Layout/Layout';
 import Aux from './hoc/Aux';
+import { Component } from 'react';
 
-function App() {
-  return (
-    <Aux>
-      <Layout>
-        <BurgerBuilder />
-      </Layout>
-    </Aux>
-  );
+class App extends Component {
+  // state = {
+  //   show: true,
+  // }
+  // componentDidMount() {
+  //   setTimeout(() => {
+  //     this.setState({
+  //       show: false
+  //     })
+  //   }, 5000);
+  // }
+  render() {
+    return (
+      <Aux>
+        <Layout>
+          {/* {this.state.show ? <BurgerBuilder /> : null} */}
+          <BurgerBuilder />
+        </Layout>
+      </Aux>
+    );
+  }
 }
 
 export default App;
