@@ -1,0 +1,25 @@
+.Nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.Nav li {
+    display: inline-block;
+    margin: 20px;
+}
+
+.Nav a {
+    padding: 10px;
+    color: teal;
+    text-decoration: none;
+}
+
+.Nav a:hover, a.active {
+    padding: 10px;
+    color: #f892af;
+    text-decoration: none;
+    background-color: yellow;
+    border-radius: 100px;
+    border: solid black 10px;
+}

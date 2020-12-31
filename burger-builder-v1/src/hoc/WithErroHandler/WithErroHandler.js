@@ -6,7 +6,6 @@ import Aux from '../Aux';
 
 const withErroHandler = (WrappedComponent, axios) => {
     return class extends Component {
-
         state = {
             error: null
         }
@@ -28,7 +27,6 @@ const withErroHandler = (WrappedComponent, axios) => {
             axios.interceptors.response.eject(this.responseInterceptor);
         }
         modalCloseHandler = () => {
-            console.log('here');
             this.setState({ error: null });
         }
         render() {

@@ -4,11 +4,8 @@ import CustomButton from '../../UI/Button/Button';
 
 class OrderSummary extends Component {
     //This could be functional component, dosen`t have to be class component
-
-
     //**
     componentDidUpdate() {
-        console.log('[OrderSummary.js] componentDidUpdate');
     }
     //**
     render() {

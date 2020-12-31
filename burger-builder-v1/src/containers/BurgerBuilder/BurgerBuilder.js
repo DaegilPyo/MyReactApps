@@ -83,26 +83,35 @@ class BurgerBuilder extends Component {
         });
     }
     purchaseContinueHandler = () => {
-        this.setState({ loading: true });
-        const order = {
-            ingredients: this.state.ingredients,
-            price: this.state.totalPrice,
-            customer: {
-                name: "Daegil",
-                age: 27,
-                address: {
-                    street: '77 Finch Ave East',
-                    zipCode: "M2N 6H8"
-                },
-                email: 'pyo920917@gmail.com'
-            },
-            deliveryMethod: 'fastest'
+        // this.setState({ loading: true });
+        // const order = {
+        //     ingredients: this.state.ingredients,
+        //     price: this.state.totalPrice,
+        //     customer: {
+        //         name: "Daegil",
+        //         age: 27,
+        //         address: {
+        //             street: '77 Finch Ave East',
+        //             zipCode: "M2N 6H8"
+        //         },
+        //         email: 'pyo920917@gmail.com'
+        //     },
+        //     deliveryMethod: 'fastest'
+        // }
+        // axios.post('/orders.json', order).then(response => {
+        //     this.setState({ puchasing: false, loading: false, });
+        // }).catch(err => {
+        //     this.setState({ loading: false, puchasing: false, });
+        // });
+        const queryParams = [];
+        for (let i in this.state.ingredients) {
+            queryParams.push(encodeURIComponent(i) + '=' + encodeURIComponent(this.state.ingredients[i]));
         }
-        axios.post('/orders.json', order).then(response => {
-            this.setState({ puchasing: false, loading: false, });
-        }).catch(err => {
-            this.setState({ loading: false, puchasing: false, });
-
+        queryParams.push('price=' + this.state.totalPrice);
+        const queryString = queryParams.join('&');
+        this.props.history.push({
+            pathname: '/checkout/',
+            search: '?' + queryString
         });
     }
     componentDidMount() {
